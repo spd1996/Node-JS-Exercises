@@ -63,8 +63,16 @@ async function fetchUsrDataPromise(id){
 }
 
 async function processUserData(id) {
-    const userData = await fetchUsrDataPromise(id)
-    console.log(userData)
+   try{
+
+        const userData = await fetchUsrDataPromise(id)
+        console.log(userData)
+
+   } catch(error){
+
+        console.log(error)
+
+   }
 }
 
 processUserData(9)
