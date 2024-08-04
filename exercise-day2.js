@@ -43,3 +43,28 @@ getUserData().then((data)=>{
 // and processes it.
 // Note: Use async/await for both functions
 
+async function fetchUsrDataPromise(id){
+    const userDataPromise = new Promise((resolve, reject)=>{
+        if(id){
+            setTimeout(()=>{
+                const userData = {
+                    id,
+                    name: 's',
+                    email: 'e'
+                }
+                resolve(userData)
+            }, 2000)
+        } else {
+            reject('User Undefined')
+        }
+    })
+
+    return userDataPromise
+}
+
+async function processUserData(id) {
+    const userData = await fetchUsrDataPromise(id)
+    console.log(userData)
+}
+
+processUserData(9)
