@@ -80,3 +80,5 @@ processUserData(9)
 // 6. Implement CRUD operation on employee array data with empCode, empName, designation, baseLocation, passportNo
 // * Get all employee details * get employee details by empCode * add new employee * modify baseLocation for a specific employee
 // * Delete one employee record
+// 7. Implement CRUD operation on account holder array data with accNo, accName, city, mobileNo
+// * Get all account details * get account details by accNo * add new account holder
