@@ -76,3 +76,7 @@ async function processUserData(id) {
 }
 
 processUserData(9)
+
+// 6. Implement CRUD operation on employee array data with empCode, empName, designation, baseLocation, passportNo
+// * Get all employee details * get employee details by empCode * add new employee * modify baseLocation for a specific employee
+// * Delete one employee record

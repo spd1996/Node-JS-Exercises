@@ -1,25 +1,19 @@
-// Factorial function using recursion
-function factorial(n) {
-    if (n === 0) {
-        return 1;
-    }
-    return n * factorial(n - 1);
-}
+import express from 'express';
+import bodyParser from 'body-parser';
+import employeeRoutes from './employees/index.js';
+import accountsRoutes from './accounts/index.js';
 
-// Recursive function to calculate the nth term of the Taylor series for e^x
-function taylorSeriesExponential(x, n) {
-    if (n === 0) {
-        return 1; // Base case: the 0th term is 1
-    }
-    return (Math.pow(x, n) / factorial(n)) + taylorSeriesExponential(x, n - 1);
-}
+const app = express();
+const port = 3000;
 
-// Function to calculate e^x using the Taylor series up to a given number of terms
-function calculateExponential(x, terms) {
-    return taylorSeriesExponential(x, terms - 1);
-}
+// Middleware
+app.use(bodyParser.json());
 
-// Example usage
-let x = 3; // Value of x
-let terms = 30; // Number of terms in the Taylor series
-console.log(`e^${x} approximated with ${terms} terms is:`, calculateExponential(x, terms));
+// Routes
+app.use('/employees', employeeRoutes);
+app.use('/accounts', accountsRoutes);
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
