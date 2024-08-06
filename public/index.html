@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Quiz</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Node.js Exercises</h1>
+        <p>Test your Node.js knowledge with these questions!</p>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is Node.js primarily used for?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Web Development</label>
+                    <label><input type="radio" name="q1" value="B"> B) Data Analysis</label>
+                    <label><input type="radio" name="q1" value="C"> C) Machine Learning</label>
+                    <label><input type="radio" name="q1" value="D"> D) Mobile Development</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Which method is used to create a new server in Node.js?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) createServer</label>
+                    <label><input type="radio" name="q2" value="B"> B) newServer</label>
+                    <label><input type="radio" name="q2" value="C"> C) startServer</label>
+                    <label><input type="radio" name="q2" value="D"> D) initServer</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. What module is used to work with file systems in Node.js?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) fileSystem</label>
+                    <label><input type="radio" name="q3" value="B"> B) fs</label>
+                    <label><input type="radio" name="q3" value="C"> C) sys</label>
+                    <label><input type="radio" name="q3" value="D"> D) os</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Which object in Node.js is used to manage events?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) EventController</label>
+                    <label><input type="radio" name="q4" value="B"> B) EventManager</label>
+                    <label><input type="radio" name="q4" value="C"> C) EventEmitter</label>
+                    <label><input type="radio" name="q4" value="D"> D) EventStream</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. What is the command to install a package globally in Node.js?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) npm install package</label>
+                    <label><input type="radio" name="q5" value="B"> B) npm install package -g</label>
+                    <label><input type="radio" name="q5" value="C"> C) npm install -g package</label>
+                    <label><input type="radio" name="q5" value="D"> D) npm global install package</label>
+                </div>
+            </div>
+            <button type="button" onclick="submitQuiz()">Submit Answers</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

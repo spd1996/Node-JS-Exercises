@@ -73,7 +73,7 @@ deleteFile('./neo.txt', (err, message) => {
 });
 
 //e. Explore the 'fs' module documentation and find out how to check if a file exists using Node.js.
-
+// sync
 import { existsSync } from 'fs';
 
 if (existsSync(filePath)) {
@@ -82,7 +82,16 @@ if (existsSync(filePath)) {
     console.log(`${filePath} does not exist.`);
 }
 
+// async
+import { access, constants } from 'fs';
 
+access(filePath, constants.F_OK, (err) => {
+    if (err) {
+        console.log(`${filePath} does not exist.`);
+    } else {
+        console.log(`${filePath} exists.`);
+    }
+});
 
 
 
