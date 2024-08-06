@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
 import employeeRoutes from './employees/index.js';
 import accountsRoutes from './accounts/index.js';
+import bankingRoutes from './banking/index.js';
 
 const app = express();
 const port = 3000;
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/employees', employeeRoutes);
 app.use('/accounts', accountsRoutes);
+app.use('/banking', bankingRoutes);
 
 // Start the server
 app.listen(port, () => {
