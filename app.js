@@ -13,6 +13,7 @@ const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/employees', employeeRoutes);
@@ -22,6 +23,4 @@ app.use('/accounts', accountsRoutes);
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-app.use(express.static(path.join(__dirname, 'public')));
 
