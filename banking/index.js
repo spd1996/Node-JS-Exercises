@@ -1,4 +1,3 @@
-// routes/banking.js
 import express from 'express';
 import bank from './bank.js';
 
@@ -78,7 +77,6 @@ router.get('/balance/:accountNumber', (req, res) => {
 // Event listener for transactions
 bank.on('transaction', (details) => {
   console.log('Transaction occurred:', details);
-  // You can add more logic here, like sending a notification
 });
 
 export default router;
