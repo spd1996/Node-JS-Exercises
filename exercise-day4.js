@@ -19,4 +19,54 @@
 
 
 // As this file does not contain any javascript code i will add a bonus question
-// Pls write the output of the code below 
+// Pls write the output of the code below
+var variable = 10 ;
+(() => {
+
+    console.log(variable)
+    variable = 20
+    console.log(variable)
+
+})();
+console.log(variable)
+var variable = 30
+
+// Using .call() for Method Borrowing
+
+const person = {
+    name: "Alice",
+    greet: function() {
+      console.log(`Hello, my name is ${this.name}.`);
+    }
+  };
+  
+  const anotherPerson = {
+    name: "Bob"
+  };
+  
+  person.greet.call(anotherPerson);
+
+  // execution context .bind  ---> note that .bind returns a function but .call does not
+
+  const suraj = {
+    name: "Suraj Prakash",
+    sayName: function() {
+        console.log(this.name)
+    }
+  }
+
+setTimeout(() =>{
+    suraj.sayName.bind(person)()
+}, 2000);
+
+// question on objects
+
+const object = {
+    height: 30
+}
+
+console.log(object.height)
+
+delete object.height
+
+console.log(object.height)
