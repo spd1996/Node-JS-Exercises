@@ -39,9 +39,9 @@ body {
 
 /* Highlighting Animation */
 @keyframes highlight {
-    0% { background-color: #bbf3ca; }
-    50% { background-color: #cdc038; }
-    100% { background-color: #2bc936; }
+    0% { background-color: #c4a9fa; }
+    50% { background-color: #fcf960; }
+    100% { background-color: #c4a9fa; }
 }
 
 
